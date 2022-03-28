@@ -1,7 +1,7 @@
-GPU=0
-CUDNN=0
-CUDNN_HALF=0
-OPENCV=0
+GPU=1
+CUDNN=1
+CUDNN_HALF=1
+OPENCV=1
 AVX=0
 OPENMP=0
 LIBSO=0
@@ -14,18 +14,18 @@ ZED_CAMERA_v2_8=0
 # set ZED_CAMERA=1 to enable ZED SDK 3.0 and above
 # set ZED_CAMERA_v2_8=1 to enable ZED SDK 2.X
 
-USE_CPP=0
+USE_CPP=1
 DEBUG=0
 
-ARCH= -gencode arch=compute_35,code=sm_35 \
-      -gencode arch=compute_50,code=[sm_50,compute_50] \
-      -gencode arch=compute_52,code=[sm_52,compute_52] \
-	    -gencode arch=compute_61,code=[sm_61,compute_61]
+# ARCH= -gencode arch=compute_35,code=sm_35 \
+#       -gencode arch=compute_50,code=[sm_50,compute_50] \
+#       -gencode arch=compute_52,code=[sm_52,compute_52] \
+# 	    -gencode arch=compute_61,code=[sm_61,compute_61]
 
 OS := $(shell uname)
 
 # GeForce RTX 3070, 3080, 3090
-# ARCH= -gencode arch=compute_86,code=[sm_86,compute_86]
+ARCH= -gencode arch=compute_86,code=[sm_86,compute_86]
 
 # Kepler GeForce GTX 770, GTX 760, GT 740
 # ARCH= -gencode arch=compute_30,code=sm_30
