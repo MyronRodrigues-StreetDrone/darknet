@@ -19,7 +19,6 @@ opencv/
 convnet/
 decaf/
 submission/
-cfg/
 temp/
 build/darknet/*
 build_*/
@@ -64,3 +63,6 @@ uselib
 uselib_track
 darknet
 vcpkg/
+predictions.jpg
+bad.list
+yolov4.conv.137
